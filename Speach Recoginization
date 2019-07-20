@@ -1,0 +1,16 @@
+
+# ASHISH KUMAR SHARMA
+
+
+
+
+import speech_recognition as ashish
+avisek = ashish.Recognizer()
+with ashish.Microphone() as source:
+    print("speak anything")
+    audio = avisek.listen(source)
+    try:
+        text=ashish.recognize_google(audio)
+        print("You said : {}".format(text))
+    except:
+        print("sorry i could not recognize your voice")
